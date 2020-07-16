@@ -1,0 +1,30 @@
+server:
+  port: 9909
+
+spring:
+  datasource:
+    username:
+    password:
+    url:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  application:
+    name: bing
+
+#MyBatis配置
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml
+  type-aliases-package: com.springboot-mybatis-demo.entity
+  configuration:
+    map-underscore-to-camel-case: true
+
+#FastJson配置
+jackson:
+  date-format: yyyy-MM-dd HH:mm:ss
+  time-zone: GMT+8
+
+#showsql
+logging:
+  level:
+    com:
+      springboot-mybatis-demo:
+        mapper: debug
